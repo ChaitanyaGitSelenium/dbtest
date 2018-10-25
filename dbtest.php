@@ -9,6 +9,11 @@ $dbpwd = getenv("DB_PASSWORD");;
 
 $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or die("Error " . mysqli_error($connection));
 
+$query_createTable = "create table users (id int)" or die("Error in the consult.." . mysqli_error($connection));
+$rs = $connection->query($query_createTable);
+
+$query_insertValuesinTable = "insert into users (1)" or die("Error in the consult.." . mysqli_error($connection));
+$rs = $connection->query($query_insertValuesinTable);
 
 $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($connection));
 
