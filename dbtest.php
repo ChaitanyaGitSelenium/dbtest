@@ -12,7 +12,7 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 $query_createTable = "CREATE TABLE users (user_id int(50), username varchar(35))" or die("Error in the consult.." . mysqli_error($connection));
 $rs = $connection->query($query_createTable);
 
-$query_insertValuesinTable = "INSERT INTO users (1,"Test")" or die("Error in the consult.." . mysqli_error($connection));
+$query_insertValuesinTable = "INSERT INTO users (1,'Test')" or die("Error in the consult.." . mysqli_error($connection));
 $rs = $connection->query($query_insertValuesinTable);
 
 $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($connection));
